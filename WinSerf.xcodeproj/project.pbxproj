@@ -9,21 +9,39 @@
 /* Begin PBXBuildFile section */
 		1539DDB42CAC2ED200407D52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DDB32CAC2ED200407D52 /* AppDelegate.swift */; };
 		1539DDB62CAC2ED200407D52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DDB52CAC2ED200407D52 /* SceneDelegate.swift */; };
-		1539DDB82CAC2ED200407D52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DDB72CAC2ED200407D52 /* ViewController.swift */; };
 		1539DDBB2CAC2ED200407D52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1539DDB92CAC2ED200407D52 /* Main.storyboard */; };
 		1539DDBD2CAC2ED300407D52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1539DDBC2CAC2ED300407D52 /* Assets.xcassets */; };
 		1539DDC02CAC2ED300407D52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1539DDBE2CAC2ED300407D52 /* LaunchScreen.storyboard */; };
+		1539DDC92CAC2EE500407D52 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1539DDC82CAC2EE500407D52 /* SnapKit */; };
+		1539DDCC2CAC2EF000407D52 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1539DDCB2CAC2EF000407D52 /* CombineCocoa */; };
+		1539DDD02CAC2F1B00407D52 /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DDCF2CAC2F1B00407D52 /* LoadViewController.swift */; };
+		1539DDD52CAC683A00407D52 /* OnbUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DDD42CAC683A00407D52 /* OnbUserViewController.swift */; };
+		1539DDD72CAC688C00407D52 /* ViewModelOnbUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DDD62CAC688C00407D52 /* ViewModelOnbUser.swift */; };
+		1539DDDA2CAC717000407D52 /* SegmentedControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DDD92CAC717000407D52 /* SegmentedControlViewController.swift */; };
+		1539DDDC2CAC752400407D52 /* SegmentedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DDDB2CAC752400407D52 /* SegmentedModel.swift */; };
+		1539DDDF2CAC79E100407D52 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DDDE2CAC79E100407D52 /* ProfileViewController.swift */; };
+		1539DDE22CAC7ACD00407D52 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DDE12CAC7ACD00407D52 /* NavController.swift */; };
+		1539DDE52CAC7B5500407D52 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DDE42CAC7B5500407D52 /* SettingsViewController.swift */; };
+		1539DDEA2CAC7B7C00407D52 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DDE92CAC7B7C00407D52 /* Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1539DDB02CAC2ED200407D52 /* WinSerf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinSerf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1539DDB32CAC2ED200407D52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1539DDB52CAC2ED200407D52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1539DDB72CAC2ED200407D52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1539DDBA2CAC2ED200407D52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1539DDBC2CAC2ED300407D52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1539DDBF2CAC2ED300407D52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1539DDC12CAC2ED300407D52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1539DDCF2CAC2F1B00407D52 /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
+		1539DDD42CAC683A00407D52 /* OnbUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbUserViewController.swift; sourceTree = "<group>"; };
+		1539DDD62CAC688C00407D52 /* ViewModelOnbUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelOnbUser.swift; sourceTree = "<group>"; };
+		1539DDD92CAC717000407D52 /* SegmentedControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlViewController.swift; sourceTree = "<group>"; };
+		1539DDDB2CAC752400407D52 /* SegmentedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedModel.swift; sourceTree = "<group>"; };
+		1539DDDE2CAC79E100407D52 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1539DDE12CAC7ACD00407D52 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
+		1539DDE42CAC7B5500407D52 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		1539DDE92CAC7B7C00407D52 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1539DDCC2CAC2EF000407D52 /* CombineCocoa in Frameworks */,
+				1539DDC92CAC2EE500407D52 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +76,79 @@
 		1539DDB22CAC2ED200407D52 /* WinSerf */ = {
 			isa = PBXGroup;
 			children = (
-				1539DDB32CAC2ED200407D52 /* AppDelegate.swift */,
-				1539DDB52CAC2ED200407D52 /* SceneDelegate.swift */,
-				1539DDB72CAC2ED200407D52 /* ViewController.swift */,
-				1539DDB92CAC2ED200407D52 /* Main.storyboard */,
-				1539DDBC2CAC2ED300407D52 /* Assets.xcassets */,
-				1539DDBE2CAC2ED300407D52 /* LaunchScreen.storyboard */,
+				1539DDE32CAC7B4A00407D52 /* Settings */,
+				1539DDE02CAC7AC100407D52 /* Ext */,
+				1539DDDD2CAC79CF00407D52 /* ProfileController */,
+				1539DDD82CAC6F5100407D52 /* SegmentedControl */,
+				1539DDCE2CAC2F0D00407D52 /* LoadPage */,
+				1539DDCD2CAC2EF600407D52 /* Support */,
 				1539DDC12CAC2ED300407D52 /* Info.plist */,
 			);
 			path = WinSerf;
+			sourceTree = "<group>";
+		};
+		1539DDCD2CAC2EF600407D52 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				1539DDB52CAC2ED200407D52 /* SceneDelegate.swift */,
+				1539DDB92CAC2ED200407D52 /* Main.storyboard */,
+				1539DDBE2CAC2ED300407D52 /* LaunchScreen.storyboard */,
+				1539DDBC2CAC2ED300407D52 /* Assets.xcassets */,
+				1539DDB32CAC2ED200407D52 /* AppDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		1539DDCE2CAC2F0D00407D52 /* LoadPage */ = {
+			isa = PBXGroup;
+			children = (
+				1539DDD32CAC682800407D52 /* OnbUser */,
+				1539DDCF2CAC2F1B00407D52 /* LoadViewController.swift */,
+			);
+			path = LoadPage;
+			sourceTree = "<group>";
+		};
+		1539DDD32CAC682800407D52 /* OnbUser */ = {
+			isa = PBXGroup;
+			children = (
+				1539DDD42CAC683A00407D52 /* OnbUserViewController.swift */,
+				1539DDD62CAC688C00407D52 /* ViewModelOnbUser.swift */,
+			);
+			path = OnbUser;
+			sourceTree = "<group>";
+		};
+		1539DDD82CAC6F5100407D52 /* SegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				1539DDD92CAC717000407D52 /* SegmentedControlViewController.swift */,
+				1539DDDB2CAC752400407D52 /* SegmentedModel.swift */,
+			);
+			path = SegmentedControl;
+			sourceTree = "<group>";
+		};
+		1539DDDD2CAC79CF00407D52 /* ProfileController */ = {
+			isa = PBXGroup;
+			children = (
+				1539DDDE2CAC79E100407D52 /* ProfileViewController.swift */,
+			);
+			path = ProfileController;
+			sourceTree = "<group>";
+		};
+		1539DDE02CAC7AC100407D52 /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				1539DDE12CAC7ACD00407D52 /* NavController.swift */,
+				1539DDE92CAC7B7C00407D52 /* Image.swift */,
+			);
+			path = Ext;
+			sourceTree = "<group>";
+		};
+		1539DDE32CAC7B4A00407D52 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1539DDE42CAC7B5500407D52 /* SettingsViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +167,10 @@
 			dependencies = (
 			);
 			name = WinSerf;
+			packageProductDependencies = (
+				1539DDC82CAC2EE500407D52 /* SnapKit */,
+				1539DDCB2CAC2EF000407D52 /* CombineCocoa */,
+			);
 			productName = WinSerf;
 			productReference = 1539DDB02CAC2ED200407D52 /* WinSerf.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +199,10 @@
 				Base,
 			);
 			mainGroup = 1539DDA72CAC2ED200407D52;
+			packageReferences = (
+				1539DDC72CAC2EE500407D52 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				1539DDCA2CAC2EF000407D52 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+			);
 			productRefGroup = 1539DDB12CAC2ED200407D52 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +230,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1539DDB82CAC2ED200407D52 /* ViewController.swift in Sources */,
+				1539DDD02CAC2F1B00407D52 /* LoadViewController.swift in Sources */,
+				1539DDDC2CAC752400407D52 /* SegmentedModel.swift in Sources */,
 				1539DDB42CAC2ED200407D52 /* AppDelegate.swift in Sources */,
+				1539DDE52CAC7B5500407D52 /* SettingsViewController.swift in Sources */,
 				1539DDB62CAC2ED200407D52 /* SceneDelegate.swift in Sources */,
+				1539DDD72CAC688C00407D52 /* ViewModelOnbUser.swift in Sources */,
+				1539DDE22CAC7ACD00407D52 /* NavController.swift in Sources */,
+				1539DDD52CAC683A00407D52 /* OnbUserViewController.swift in Sources */,
+				1539DDDF2CAC79E100407D52 /* ProfileViewController.swift in Sources */,
+				1539DDEA2CAC7B7C00407D52 /* Image.swift in Sources */,
+				1539DDDA2CAC717000407D52 /* SegmentedControlViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,11 +394,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WinSerf/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WinSerf;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,6 +408,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = k.WinSerf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -321,11 +426,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WinSerf/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WinSerf;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,6 +440,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = k.WinSerf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -361,6 +471,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1539DDC72CAC2EE500407D52 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		1539DDCA2CAC2EF000407D52 /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1539DDC82CAC2EE500407D52 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1539DDC72CAC2EE500407D52 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		1539DDCB2CAC2EF000407D52 /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1539DDCA2CAC2EF000407D52 /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1539DDA82CAC2ED200407D52 /* Project object */;
 }
