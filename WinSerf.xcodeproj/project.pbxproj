@@ -29,6 +29,11 @@
 		1539DDF42CAD7D1100407D52 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DDF32CAD7D1100407D52 /* BoardView.swift */; };
 		1539DDF72CAD8BAC00407D52 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DDF62CAD8BAC00407D52 /* EditProfileViewController.swift */; };
 		1539DDFA2CADE86A00407D52 /* EquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DDF92CADE86A00407D52 /* EquipmentViewController.swift */; };
+		1539DE4A2CAF08D000407D52 /* SwimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DE492CAF08D000407D52 /* SwimViewController.swift */; };
+		1539DE4C2CAF0E6400407D52 /* SwimModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DE4B2CAF0E6400407D52 /* SwimModel.swift */; };
+		1539DE4E2CAF0F5400407D52 /* SwimViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DE4D2CAF0F5400407D52 /* SwimViewModel.swift */; };
+		1539DE512CAF1BD200407D52 /* EmptySwim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DE502CAF1BD200407D52 /* EmptySwim.swift */; };
+		1539DE532CAF22CF00407D52 /* NewEditSpeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DE522CAF22CF00407D52 /* NewEditSpeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +59,11 @@
 		1539DDF32CAD7D1100407D52 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		1539DDF62CAD8BAC00407D52 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		1539DDF92CADE86A00407D52 /* EquipmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentViewController.swift; sourceTree = "<group>"; };
+		1539DE492CAF08D000407D52 /* SwimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimViewController.swift; sourceTree = "<group>"; };
+		1539DE4B2CAF0E6400407D52 /* SwimModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimModel.swift; sourceTree = "<group>"; };
+		1539DE4D2CAF0F5400407D52 /* SwimViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimViewModel.swift; sourceTree = "<group>"; };
+		1539DE502CAF1BD200407D52 /* EmptySwim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySwim.swift; sourceTree = "<group>"; };
+		1539DE522CAF22CF00407D52 /* NewEditSpeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditSpeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +98,7 @@
 		1539DDB22CAC2ED200407D52 /* WinSerf */ = {
 			isa = PBXGroup;
 			children = (
+				1539DE482CAF08C300407D52 /* Swim */,
 				1539DDE32CAC7B4A00407D52 /* Settings */,
 				1539DDE02CAC7AC100407D52 /* Ext */,
 				1539DDDD2CAC79CF00407D52 /* ProfilePage */,
@@ -201,6 +212,26 @@
 			path = Equipment;
 			sourceTree = "<group>";
 		};
+		1539DE482CAF08C300407D52 /* Swim */ = {
+			isa = PBXGroup;
+			children = (
+				1539DE4F2CAF1BBC00407D52 /* Views */,
+				1539DE492CAF08D000407D52 /* SwimViewController.swift */,
+				1539DE4B2CAF0E6400407D52 /* SwimModel.swift */,
+				1539DE4D2CAF0F5400407D52 /* SwimViewModel.swift */,
+				1539DE522CAF22CF00407D52 /* NewEditSpeedViewController.swift */,
+			);
+			path = Swim;
+			sourceTree = "<group>";
+		};
+		1539DE4F2CAF1BBC00407D52 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1539DE502CAF1BD200407D52 /* EmptySwim.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -286,15 +317,20 @@
 				1539DDDC2CAC752400407D52 /* SegmentedModel.swift in Sources */,
 				1539DDB42CAC2ED200407D52 /* AppDelegate.swift in Sources */,
 				1539DDE52CAC7B5500407D52 /* SettingsViewController.swift in Sources */,
+				1539DE4E2CAF0F5400407D52 /* SwimViewModel.swift in Sources */,
 				1539DDF22CAD7A2100407D52 /* LoadProfileToFile.swift in Sources */,
 				1539DDB62CAC2ED200407D52 /* SceneDelegate.swift in Sources */,
+				1539DE4A2CAF08D000407D52 /* SwimViewController.swift in Sources */,
 				1539DDD72CAC688C00407D52 /* ViewModelOnbUser.swift in Sources */,
 				1539DDE22CAC7ACD00407D52 /* NavController.swift in Sources */,
 				1539DDD52CAC683A00407D52 /* OnbUserViewController.swift in Sources */,
 				1539DDDF2CAC79E100407D52 /* ProfileViewController.swift in Sources */,
 				1539DDEA2CAC7B7C00407D52 /* Image.swift in Sources */,
 				1539DDEE2CAC8AE000407D52 /* ProfileViewModel.swift in Sources */,
+				1539DE512CAF1BD200407D52 /* EmptySwim.swift in Sources */,
 				1539DDF42CAD7D1100407D52 /* BoardView.swift in Sources */,
+				1539DE532CAF22CF00407D52 /* NewEditSpeedViewController.swift in Sources */,
+				1539DE4C2CAF0E6400407D52 /* SwimModel.swift in Sources */,
 				1539DDDA2CAC717000407D52 /* SegmentedControlViewController.swift in Sources */,
 				1539DDEC2CAC891900407D52 /* SwimModels.swift in Sources */,
 			);

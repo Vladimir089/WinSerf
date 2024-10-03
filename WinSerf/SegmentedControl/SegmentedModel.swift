@@ -12,7 +12,7 @@ import UIKit
 class segmentedModel {
     
     let profileViewController = UINavigationController(rootViewController: ProfileViewController())
-    let swimViewController = ssViewController()
+    let swimViewController = UINavigationController(rootViewController: SwimViewController())
 
     private lazy var viewControllersArr: [UIViewController] = []
     
