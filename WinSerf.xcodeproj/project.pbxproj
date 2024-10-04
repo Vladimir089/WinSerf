@@ -34,6 +34,7 @@
 		1539DE4E2CAF0F5400407D52 /* SwimViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DE4D2CAF0F5400407D52 /* SwimViewModel.swift */; };
 		1539DE512CAF1BD200407D52 /* EmptySwim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DE502CAF1BD200407D52 /* EmptySwim.swift */; };
 		1539DE532CAF22CF00407D52 /* NewEditSpeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DE522CAF22CF00407D52 /* NewEditSpeedViewController.swift */; };
+		1539DE552CB064E100407D52 /* CreateEditTricksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539DE542CB064E100407D52 /* CreateEditTricksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		1539DE4D2CAF0F5400407D52 /* SwimViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimViewModel.swift; sourceTree = "<group>"; };
 		1539DE502CAF1BD200407D52 /* EmptySwim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySwim.swift; sourceTree = "<group>"; };
 		1539DE522CAF22CF00407D52 /* NewEditSpeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditSpeedViewController.swift; sourceTree = "<group>"; };
+		1539DE542CB064E100407D52 /* CreateEditTricksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEditTricksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 				1539DE4F2CAF1BBC00407D52 /* Views */,
 				1539DE492CAF08D000407D52 /* SwimViewController.swift */,
 				1539DE4B2CAF0E6400407D52 /* SwimModel.swift */,
+				1539DE542CB064E100407D52 /* CreateEditTricksViewController.swift */,
 				1539DE4D2CAF0F5400407D52 /* SwimViewModel.swift */,
 				1539DE522CAF22CF00407D52 /* NewEditSpeedViewController.swift */,
 			);
@@ -319,6 +322,7 @@
 				1539DDE52CAC7B5500407D52 /* SettingsViewController.swift in Sources */,
 				1539DE4E2CAF0F5400407D52 /* SwimViewModel.swift in Sources */,
 				1539DDF22CAD7A2100407D52 /* LoadProfileToFile.swift in Sources */,
+				1539DE552CB064E100407D52 /* CreateEditTricksViewController.swift in Sources */,
 				1539DDB62CAC2ED200407D52 /* SceneDelegate.swift in Sources */,
 				1539DE4A2CAF08D000407D52 /* SwimViewController.swift in Sources */,
 				1539DDD72CAC688C00407D52 /* ViewModelOnbUser.swift in Sources */,

@@ -18,11 +18,11 @@ class ProfileViewController: UIViewController {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         layout.scrollDirection = .vertical
         collection.showsVerticalScrollIndicator = false
-        collection.backgroundColor = UIColor(red: 242/255, green: 242/255, blue: 247/255, alpha: 1)
         collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "1")
         collection.delegate = self
         collection.dataSource = self
         collection.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60, right: 0)
+        collection.backgroundColor = UIColor(red: 242/255, green: 242/255, blue: 247/255, alpha: 1)
         return collection
     }()
 
@@ -193,6 +193,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         if collectionView == mainCollection {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "1", for: indexPath)
             cell.subviews.forEach { $0.removeFromSuperview() }
+            cell.backgroundColor = UIColor(red: 242/255, green: 242/255, blue: 247/255, alpha: 1)
             if indexPath.row == 0 {
                 print(23)
                 let boadView = BoardView()
@@ -212,7 +213,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
                     let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
                     layout.scrollDirection = .vertical
                     collection.showsVerticalScrollIndicator = false
-                    collection.backgroundColor = .white
+                    collection.backgroundColor = UIColor(red: 242/255, green: 242/255, blue: 247/255, alpha: 1)
                     collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "2")
                     collection.delegate = self
                     collection.dataSource = self
@@ -227,6 +228,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "2", for: indexPath)
             cell.subviews.forEach { $0.removeFromSuperview() }
+            cell.backgroundColor = UIColor(red: 242/255, green: 242/255, blue: 247/255, alpha: 1)
             if  viewModel.equipmentArr.count > 0 && indexPath.row != viewModel.equipmentArr.count + 1 {
                 cell.backgroundColor = .white
                 let view = UIView()

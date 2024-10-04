@@ -109,4 +109,14 @@ class LoadProfileToFile {
         }
     }
     
+    func saveTricksArrToFile(data: Data) throws {
+        let fileManager = FileManager.default
+        if let documentDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let filePath = documentDirectory.appendingPathComponent("tricks.plist")
+            try data.write(to: filePath)
+        } else {
+            throw NSError(domain: "SaveError", code: 1, userInfo: [NSLocalizedDescriptionKey: "Unable to get document directory"])
+        }
+    }
+    
 }

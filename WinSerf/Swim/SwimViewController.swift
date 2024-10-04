@@ -76,7 +76,10 @@ class SwimViewController: UIViewController {
         alertController.addAction(speedAction)
         
         let tricksAction = UIAlertAction(title: "Tricks", style: .default) { _ in
-            print(1)
+            let vc = CreateEditTricksViewController()
+            vc.isNew = true
+            vc.model = self.viewModel
+            self.navigationController?.pushViewController(vc, animated: true)
         }
         alertController.addAction(tricksAction)
         
@@ -230,6 +233,39 @@ class SwimViewController: UIViewController {
         self.present(alertController, animated: true)
     }
     
+    private func delTricks(index: Int) {
+        let alertController = UIAlertController(title: "Delete", message: "Do you really want to delete?", preferredStyle: .alert)
+        let noAction = UIAlertAction(title: "Cancel", style: .default)
+        alertController.addAction(noAction)
+        
+        let delAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
+            self.viewModel.delTricks(index: index)
+        }
+        alertController.addAction(delAction)
+        self.present(alertController, animated: true)
+    }
+    
+    @objc private func menuButtonTappedTricks(_ sender: UIButton) {
+        let firstAction = UIAction(title: "Edit", image: .editMenu) { _ in
+            let vc = CreateEditTricksViewController()
+            vc.isNew = false
+            vc.model = self.viewModel
+            vc.index = sender.tag
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+        let secondAction = UIAction(title: "Delete", image: .delMenu) { _ in
+            self.delTricks(index: sender.tag)
+        }
+        
+        let menu = UIMenu(title: "", children: [firstAction, secondAction])
+        
+        if #available(iOS 14.0, *) {
+            sender.menu = menu
+            sender.showsMenuAsPrimaryAction = true
+        }
+    }
+    
     
     @objc private func menuButtonTapped(_ sender: UIButton) {
         let firstAction = UIAction(title: "Edit", image: .editMenu) { _ in
@@ -366,7 +402,7 @@ extension SwimViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 
                 let distanceView = createLinsesView(textOne: "Distance", textTwo: viewModel.speedArr[indexPath.row].distance + " m")
                 let speedView = createLinsesView(textOne: "Speed", textTwo: viewModel.speedArr[indexPath.row].speed + " m/s")
-                let timeView = createLinsesView(textOne: "Time", textTwo: viewModel.speedArr[indexPath.row].speed + " s")
+                let timeView = createLinsesView(textOne: "Time", textTwo: viewModel.speedArr[indexPath.row].time + " s")
                 let windView = createLinsesView(textOne: "Wind", textTwo: viewModel.speedArr[indexPath.row].wind + " m/s")
                 stackView.addArrangedSubview(distanceView)
                 stackView.addArrangedSubview(speedView)
@@ -414,11 +450,103 @@ extension SwimViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.subviews.forEach { $0.removeFromSuperview() }
             if viewModel.returnTricksArrCount() > 0 {
                 
+                let mainView = UIView()
+                mainView.backgroundColor = .white
+                mainView.layer.cornerRadius = 9
+                mainView.layer.shadowColor = UIColor.black.cgColor
+                mainView.layer.shadowOpacity = 0.25
+                mainView.layer.shadowOffset = CGSize(width: 0, height: 0)
+                mainView.layer.shadowRadius = 4
+                mainView.layer.masksToBounds = false
+                
+                cell.addSubview(mainView)
+                mainView.snp.makeConstraints { make in
+                    make.left.right.equalToSuperview().inset(15)
+                    make.top.bottom.equalToSuperview().inset(5)
+                }
+                
+                let stackView = UIStackView()
+                stackView.axis = .vertical
+                stackView.backgroundColor = .white
+                stackView.distribution = .fillEqually
+                stackView.spacing = 2
+                mainView.addSubview(stackView)
+                stackView.snp.makeConstraints { make in
+                    make.left.right.equalToSuperview().inset(10)
+                    make.top.equalToSuperview().inset(10)
+                    make.height.equalTo(94)
+                }
+                
+                let distanceView = createLinsesView(textOne: "Distance", textTwo: viewModel.tricksArr[indexPath.row].distance + " m")
+                let timeView = createLinsesView(textOne: "Time", textTwo: viewModel.tricksArr[indexPath.row].time + " s")
+                let windView = createLinsesView(textOne: "Wind", textTwo: viewModel.tricksArr[indexPath.row].wind + " m/s")
+                stackView.addArrangedSubview(distanceView)
+                stackView.addArrangedSubview(timeView)
+                stackView.addArrangedSubview(windView)
+                
+                let tricksLabel = UILabel()
+                tricksLabel.text = "Tricks"
+                tricksLabel.textColor = .black
+                tricksLabel.font = .systemFont(ofSize: 17, weight: .semibold)
+                cell.addSubview(tricksLabel)
+                tricksLabel.snp.makeConstraints { make in
+                    make.centerX.equalToSuperview()
+                    make.top.equalTo(stackView.snp.bottom).inset(-5)
+                }
+                
+                let secondStack = UIStackView()
+                secondStack.axis = .vertical
+                secondStack.backgroundColor = .white
+                secondStack.distribution = .fillEqually
+                secondStack.spacing = 2
+                mainView.addSubview(secondStack)
+                
+                
+                var height = 0
+                for i in viewModel.tricksArr[indexPath.row].tricks {
+                    let secondView = createLinsesView(textOne: i.name, textTwo: i.value)
+                    secondStack.addArrangedSubview(secondView)
+                    height += 30
+                }
+                
+                secondStack.snp.makeConstraints { make in
+                    make.left.right.equalToSuperview().inset(10)
+                    make.top.equalTo(tricksLabel.snp.bottom).inset(-5)
+                    make.height.equalTo(height + 4)
+                }
+                
+                let dateButton = UIButton()
+                dateButton.isEnabled = false
+                dateButton.layer.cornerRadius = 6
+                dateButton.layer.borderWidth = 0.33
+                dateButton.layer.borderColor = UIColor.customBlue.cgColor
+                dateButton.setTitleColor(.customBlue, for: .normal)
+                dateButton.backgroundColor = .white
+                dateButton.setTitle(viewModel.tricksArr[indexPath.row].date, for: .normal)
+                mainView.addSubview(dateButton)
+                dateButton.snp.makeConstraints { make in
+                    make.left.equalToSuperview().inset(10)
+                    make.height.equalTo(34)
+                    make.bottom.equalToSuperview().inset(10)
+                    make.right.equalToSuperview().inset(55)
+                }
+                
+                let menuButton = UIButton(type: .system)
+                menuButton.tag = indexPath.row
+                menuButton.setBackgroundImage(.buttonMenu.resize(targetSize: CGSize(width: 10, height: 10)), for: .normal)
+                mainView.addSubview(menuButton)
+                menuButton.snp.makeConstraints { make in
+                    make.centerY.equalTo(dateButton)
+                    make.height.width.equalTo(22)
+                    make.right.equalToSuperview().inset(22)
+                }
+                menuButton.addTarget(self, action: #selector(menuButtonTappedTricks), for: .touchUpInside)
+                
             } else {
                 let mainView = EmptySwim(item: "tricks")
                 cell.addSubview(mainView)
                 mainView.snp.makeConstraints { make in
-                    make.left.right.equalToSuperview().inset(15)
+                    make.left.right.equalToSuperview().inset(10)
                     make.top.bottom.equalToSuperview().inset(2)
                 }
             }
@@ -451,7 +579,7 @@ extension SwimViewController: UICollectionViewDelegate, UICollectionViewDataSour
             }
         } else {
             if viewModel.returnTricksArrCount() > 0 {
-                return CGSize(width: collectionView.bounds.width , height: 340)
+                return CGSize(width: collectionView.bounds.width , height: 290)
             } else {
                 return CGSize(width: collectionView.bounds.width , height: 130)
             }

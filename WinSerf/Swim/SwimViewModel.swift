@@ -46,10 +46,20 @@ class SwimViewModel {
             speedArr[index] = item
         }
         
-        save()
+        saveSpeed()
     }
     
-    private func save() {
+    func saveTrick(item: Tricks, isNew: Bool, index: Int) {
+        if isNew {
+            tricksArr.append(item)
+        } else {
+            tricksArr[index] = item
+        }
+        
+        saveTrics()
+    }
+    
+    private func saveSpeed() {
         do {
             let data = try JSONEncoder().encode(speedArr) //тут мкассив конвертируем в дату
             try loadFile.saveSpeedArrToFile(data: data)
@@ -59,8 +69,23 @@ class SwimViewModel {
         }
     }
     
+    private func saveTrics() {
+        do {
+            let data = try JSONEncoder().encode(tricksArr) //тут мкассив конвертируем в дату
+            try loadFile.saveTricksArrToFile(data: data)
+            updateCollectionPublisher.send(0)
+        } catch {
+            print("Failed to encode or save athleteArr: \(error)")
+        }
+    }
+    
     func delSpeed(index: Int) {
         speedArr.remove(at: index)
-        save()
+        saveSpeed()
+    }
+    
+    func delTricks(index: Int) {
+        tricksArr.remove(at: index)
+        saveTrics()
     }
 }
